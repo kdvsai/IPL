@@ -8,44 +8,216 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body id="body">
-<div class="about_teams">
+<div class="container">
     <div class="nav">
         <img src="Logos/IPL.jpeg" alt="ipl_logo">
         <ul>
-            <li>Home</li>
-            <li>Teams</li>
-            <li>Ranking</li>
-            <li>performance</li>
+            <li><button id="Teams">Teams</button></li>
+            <li><button id="Stats">Stats</button></li>
+            <li><button id="PointsTable">Points table</button></li>
         </ul>
     </div>
-    <div class="main">
-        <div class="info">
+    <div class="Teams">
+        <div class="buttons">
+            <button id="CSK"><img src="Logos/CSKlogo.jpg"></button>
+            <button id="RCB"><img src="Logos/RCBlogo.jpg"></button>
+            <button id="DC"><img src="Logos/DClogo.jpg"></button>
+            <button id="MI"><img src="Logos/MIlogo.jpg"></button>
+            <button id="SRH"><img src="Logos/SRHlogo.jpg"></button>
+            <button id="KXIP"><img src="Logos/KXIPlogo.jpg"></button>
+            <button id="RR"><img src="Logos/RRlogo.jpg"></button></button>
+            <button id="KKR"><img src="Logos/KKRlogo.jpg"></button></button>
+        </div>
+        <div class="main">
+            <div class="info">
             <img id="logo" src="Logos/milogo.jpg">
             <div class="teaminfo">
                 <p id="name">Team Name: Mumbai Indians</p>
                 <p id="captain">Captain: Rohit Sharma</p>
                 <p id="home">Home Ground: Wankhede Stadium, Mumbai</p>
-                <p id="champ">ChampionShip Years: 2013, 2015, 2017, 2019, 2020</p>
+                <p id="champ">Championship Years: 2013, 2015, 2017, 2019, 2020</p>
             </div>
-        </div>
+            </div>
         <div class="logo">
             <img id="team" src="Logos/miteam.jpg">
         </div>
     </div>
-    <div class="buttons">
-        <button id="CSK">CSK</button>
-        <button id="DC">DC</button>
-        <button id="MI">MI</button>
-        <button id="SRH">SRH</button>
-        <button id="KXIP">KXIP</button>
-        <button id="RR">RR</button>
-        <button id="KKR">KKR</button>
-        <button id="RCB">RCB</button>
+    <div class="players">
+        <img src="MI/player1.jpg" id="player">
+        <img src="MI/player2.jpg" id="player">
+        <img src="MI/player3.jpg" id="player">
+        <img src="MI/player4.jpg" id="player">
+        <img src="MI/player5.jpg" id="player">
+        <img src="MI/player6.jpg" id="player">
+        <img src="MI/player7.jpg" id="player">
+        <img src="MI/player8.jpg" id="player">
+        <img src="MI/player9.jpg" id="player">
+        <img src="MI/player10.jpg" id="player">
+        <img src="MI/player11.jpg" id="player">
+
+    </div>
+    </div>
+    <div class="Stats">
+        <div class="statsyear">
+            <select id="statsyear">
+            <option selected>Season 2021</option>
+            <option>Season 2020</option>
+            <option>Season 2019</option>
+            <option>Season 2018</option>
+            </select>
+        </div>
+        <div class="ff">
+        <div class="o" style="color:orangered">
+            <h2 >Orange Cap</h2>
+            <img id="ig" src="Stats/ruturaj.jpg">
+            <h2 id="change">635 Runs</h2><h2></h2>
+        </div>
+        <div class="o">
+            <h2>Most Fours</h2>
+            <img id="ig"src="Stats/head.jpg">
+            <h2 id="change">64 </h2>
+        </div>
+        <div class="o">
+            <h2> Most Sixes</h2>
+            <img id="ig"src="Stats/kl.jpg">
+            <h2 id="change">30 </h2>
+        </div>
+        <div class="o">
+            <h2> Most Fifties</h2>
+            <img id="ig"src="Stats/faf.jpg">
+            <h2 id="change">6</h2>
+        </div>
+        <div class="o">
+            <h2>Most Centuries</h2>
+            <img id="ig" src="Stats/ruturaj.jpg">
+            <h2 id="change">1 </h2>
+        </div>
+        <div class="o" style="color:purple">
+            <h2>Purple Cap</h2>
+            <img id="ig"src="Stats/harshal.jpg">
+            <h2 id="change">32 </h2>
+        </div>
+        <div class="o">
+            <h2>Best Economy</h2>
+            <img id="ig"src="Stats/narine.jpg">
+            <h2 id="change">4.00</h2>
+        </div>
+        <div class="o">
+            <h2>Best Average</h2>
+            <img id="ig"src="Stats/narine.jpg">
+            <h2 id="change">8.00 </h2>
+        </div>
+        </div>
+    </div>
+    <div class="PointsTable">
+        <div class="year">
+            <select id="year">
+                <option selected>Season 2021</option>
+                <option id="2020">Season 2020</option>
+                <option id="2019">Season 2019</option>
+                <option>Season 2018</option>
+            </select>
+        </div>
+        <div class="table">
+            <table>
+                <tbody>
+                    <tr id="heading">
+                        <td>POS</td>
+                        <td>TEAM</td>
+                        <td></td>
+                        <td>PLAYED</td>
+                        <td>WON</td>
+                        <td>LOST</td>
+                        <td>NRR</td>
+                        <td>POINTS</td>
+                    </tr>
+                    <tr id="table">
+                        <td id="pos">1</td>
+                        <td><img id="im"src="Logos/DClogo.jpg"></td>
+                        <td id="teamname">DC</td>
+                        <td id="p">14</td>
+                        <td id="w">10</td>
+                        <td id="l">4</td>
+                        <td id="nrr">0.481</td>
+                        <td id="points">20</td>
+                    </tr>
+                    <tr id="table">
+                        <td id="pos">2</td>
+                        <td><img id="im"src="Logos/CSKlogo.jpg"></td>
+                        <td id="teamname">CSK</td>
+                        <td id="p">14</td>
+                        <td id="w">9</td>
+                        <td id="l">5</td>
+                        <td id="nrr">0.455</td>
+                        <td id="points">18</td>
+                    </tr>
+                    <tr id="table">
+                        <td id="pos">3</td>
+                        <td><img id="im"src="Logos/RCBlogo.jpg"></td>
+                        <td id="teamname">RCB</td>
+                        <td id="p">14</td>
+                        <td id="w">9</td>
+                        <td id="l">5</td>
+                        <td id="nrr">-0.14</td>
+                        <td id="points">18</td>
+                    </tr>
+                    <tr id="table">
+                        <td id="pos">4</td>
+                        <td><img id="im"src="Logos/KKRlogo.jpg"></td>
+                        <td id="teamname">KKR</td>
+                        <td id="p">14</td>
+                        <td id="w">7</td>
+                        <td id="l">7</td>
+                        <td id="nrr">0.587</td>
+                        <td id="points">14</td>
+                    </tr>
+                    <tr id="table">
+                        <td id="pos">5</td>
+                        <td><img id="im"src="Logos/MIlogo.jpg"></td>
+                        <td id="teamname">MI</td>
+                        <td id="p">14</td>
+                        <td id="w">7</td>
+                        <td id="l">7</td>
+                        <td id="nrr">0.116</td>
+                        <td id="points">14</td>
+                    </tr>
+                    <tr id="table">
+                        <td id="pos">6</td>
+                        <td><img id="im"src="Logos/KXIPlogo.jpg"></td>
+                        <td id="teamname">KXIP</td>
+                        <td id="p">14</td>
+                        <td id="w">6</td>
+                        <td id="l">8</td>
+                        <td id="nrr">-0.001</td>
+                        <td id="points">12</td>
+                    </tr>
+                    <tr id="table">
+                        <td id="pos">7</td>
+                        <td><img id="im"src="Logos/RRlogo.jpg"></td>
+                        <td id="teamname">RR</td>
+                        <td id="p">14</td>
+                        <td id="w">9</td>
+                        <td id="l">5</td>
+                        <td id="nrr">-0.993</td>
+                        <td id="points">10</td>
+                    </tr>
+                    <tr id="table">
+                        <td id="pos">8</td>
+                        <td><img id="im"src="Logos/SRHlogo.jpg"></td>
+                        <td id="teamname">SRH</td>
+                        <td id="p">14</td>
+                        <td id="w">3</td>
+                        <td id="l">11</td>
+                        <td id="nrr">-0.545</td>
+                        <td id="points">6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
-<div class="players">
-
-</div>
-    <script src="script.js"></script>
+    <script src="Teams.js"></script>
+    <script src="Table.js"></script>
+    <script src="Stats.js"></script>
 </body>
 </html>

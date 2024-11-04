@@ -50,20 +50,40 @@ const iplTeams = [
         championshipYears: [2016]
     }
 ];
-let name="Sunrisers Hyderabad";
-let obj = iplTeams.find(teams=>{
-    teams.name==="Sunrisers Hyderabad";
-})
 
-const selectedTEam = iplTeams.find(team => team.name === "Sunrisers Hyderabad");
+let TeamsClass=document.querySelector(".Teams");
+let StatsClass=document.querySelector(".Stats");
+let PointsTableClass=document.querySelector(".PointsTable");
+
+let Teams=document.querySelector("#Teams");
+let Stats=document.querySelector("#Stats");
+let PointsTable=document.querySelector("#PointsTable");
+
+Teams.addEventListener("click",()=>{
+    TeamsClass.style.display="block";
+    StatsClass.style.display="none";
+    PointsTableClass.style.display="none";
+})
+Stats.addEventListener("click",()=>{
+    StatsClass.style.display="block";
+    TeamsClass.style.display="none";
+    PointsTableClass.style.display="none";
+})
+PointsTable.addEventListener("click",()=>{
+    PointsTableClass.style.display="block";
+    TeamsClass.style.display="none";
+    StatsClass.style.display="none";
+})
 
 let buttons = document.querySelector(".buttons");
 let team = buttons.querySelectorAll("button");
 team.forEach(e=>{
     e.addEventListener("click",()=>{
         let id = e.getAttribute("id");
+        console.log(e);
         let changed=iplTeams.find(t=>t.code===id);
         changeData(changed);
+        Players(changed);
     })
 })
 const changeData=(changed)=>{
@@ -91,5 +111,13 @@ const changeData=(changed)=>{
 
     team_mem.src=`Logos/${changed.code}team.jpg`;
     team_logo.src=`Logos/${changed.code}logo.jpg`;
-
+    
+}
+const Players=(changed)=>{
+    let f = document.querySelectorAll("#player");
+    let count=0;
+    images.forEach(node=>{
+        node.src=`${changed.code}/player${count}.jpg`;
+        count++;
+    })
 }
