@@ -116,7 +116,7 @@ const changeData=(changed)=>{
 const Players=(changed)=>{
     let f = document.querySelectorAll("#player");
     let count=0;
-    images.forEach(node=>{
+    f.forEach(node=>{
         node.src=`${changed.code}/player${count}.jpg`;
         count++;
     })
